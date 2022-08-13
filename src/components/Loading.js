@@ -1,7 +1,7 @@
 import React from 'react';
-import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
-import {colors} from '../utils';
+import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import {TextView} from '../components';
+import {colors} from '../utils';
 
 const Loading = ({type}) => {
   let backgroundColor = colors.white;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList, SafeAreaView, TouchableOpacity, View} from 'react-native';
-import {Header, Loading, Space, ItemMenu} from '../../components';
+import {Header, ItemMenu, Loading, Space} from '../../components';
 import {Api} from '../../services';
 import {SimpleAlert} from '../../utils';
 import ItemProduct from './ItemProduct';

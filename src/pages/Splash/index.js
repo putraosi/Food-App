@@ -1,8 +1,7 @@
-import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
-import styles from './SplashStyles';
+import {SafeAreaView, StatusBar} from 'react-native';
 import {TextView} from '../../components';
-import {colors} from '../../utils';
+import styles from './SplashStyles';
 
 const Splash = ({navigation}) => {
   useEffect(() => {

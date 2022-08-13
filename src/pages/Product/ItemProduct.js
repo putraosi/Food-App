@@ -1,12 +1,5 @@
-import {
-  Dimensions,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
 import React from 'react';
+import {Dimensions, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {TextView} from '../../components';
 import {rupiah} from '../../helpers';
 

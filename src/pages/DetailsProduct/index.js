@@ -1,8 +1,8 @@
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import styles from './DetailsProductStyles';
+import {Image, SafeAreaView, View} from 'react-native';
 import {Header, Separator, TextView} from '../../components';
 import {rupiah} from '../../helpers';
+import styles from './DetailsProductStyles';
 
 const DetailsProduct = ({navigation, route}) => {
   console.log('cek data', route.params);

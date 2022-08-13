@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FlatList, SafeAreaView, View} from 'react-native';
-import {Gap, Header, ItemMenu, Space, TextView} from '../../components';
+import {Header, ItemMenu, TextView} from '../../components';
 import styles from './FeaturesStyles';
 
 const dummyMenu = [
