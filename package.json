@@ -6,6 +6,8 @@
     "android": "npx react-native run-android",
     "ios": "npx react-native run-ios",
     "start": "npx react-native start --reset-cache",
+    "bundle": "react-native bundle --verbose --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "apk-debug": "yarn bundle; cd android; ./gradlew clean; ./gradlew assembleDebug",
     "test": "jest",
     "lint": "eslint ."
   },
