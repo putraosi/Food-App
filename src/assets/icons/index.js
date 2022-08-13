@@ -1,3 +1,4 @@
 import IcBack from './back.png';
+import IcHome from './home.png';
 
-export {IcBack};
+export {IcBack, IcHome};

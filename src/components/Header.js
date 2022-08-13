@@ -23,7 +23,7 @@ const Header = ({title, centered, onDismiss}) => {
         {title}
       </TextView>
 
-      <View style={styles.gap} />
+      {onDismiss && <View style={styles.gap} />}
     </View>
   );
 };

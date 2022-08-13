@@ -1,12 +1,12 @@
-import {FlatList, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import styles from './ProductStyles';
-import {Header, Loading} from '../../components';
+import {FlatList, SafeAreaView, TouchableOpacity, View} from 'react-native';
+import {Header, Loading, Space, ItemMenu} from '../../components';
 import {Api} from '../../services';
-import ItemProduct from './ItemProduct';
 import {SimpleAlert} from '../../utils';
+import ItemProduct from './ItemProduct';
+import styles from './ProductStyles';
 
-const Product = () => {
+const Product = ({navigation}) => {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [data, setData] = useState([]);
@@ -50,9 +50,29 @@ const Product = () => {
               getLists();
             }}
             renderItem={({item, index}) => (
-              <ItemProduct key={index} data={item} />
+              <ItemProduct
+                key={index}
+                data={item}
+                onPress={() =>
+                  navigation.navigate('DetailsProduct', {data: item})
+                }
+              />
             )}
           />
+
+          <TouchableOpacity
+            style={styles.containerMenu}
+            onPress={() => navigation.navigate('Features')}
+            activeOpacity={1}>
+            <View style={styles.swipe} />
+
+            <Space>
+              <ItemMenu />
+              <ItemMenu />
+              <ItemMenu />
+              <ItemMenu />
+            </Space>
+          </TouchableOpacity>
         </>
       )}
     </SafeAreaView>

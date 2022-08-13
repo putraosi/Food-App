@@ -1,16 +1,22 @@
-import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import {TextView} from '../../components';
 import {rupiah} from '../../helpers';
 
-const ItemProduct = ({data}) => {
-  console.log('cek item', data);
+const ItemProduct = ({data, onPress}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image style={styles.image} source={{uri: data.cover}} />
       <TextView style={styles.title}>{data.name}</TextView>
       <TextView style={styles.price}>{`Rp${rupiah(data.price)}`}</TextView>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -21,4 +21,8 @@ export const colors = {
     primary: mainColors.black2,
     secondary: mainColors.gray1,
   },
+
+  separator: {
+    primary: mainColors.gray1,
+  },
 };
